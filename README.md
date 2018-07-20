@@ -18,10 +18,13 @@ nano code/featurization.py
 bag_of_words = CountVectorizer(stop_words='english',
                                max_features=6000,
                                ngram_range=(1, 3))
-                               
+
+
 git commit -am "Add bigram features"
+
 dvc repro evaluation.txt.dvc
-cat data/evaluation.txt
+
+.cat data/evaluation.txt
 
 
 
