@@ -24,7 +24,7 @@ git commit -am "Add bigram features"
 
 dvc repro evaluation.txt.dvc
 
-.cat data/evaluation.txt
+cat data/evaluation.txt
 
 
 
