@@ -7,3 +7,22 @@ wget -L https://gist.githubusercontent.com/VigneshBaskar/419d3df6a1fbca18b595360
 chmod +x ./initial_setup.sh
 
 ./initial_setup.sh
+
+cd dvc_tutorial
+cat data/evaluation.txt
+
+
+## Specify ngram parameter in CountVectorizer (lines 50–53) and increase number of features to 6000:
+nano code/featurization.py
+
+bag_of_words = CountVectorizer(stop_words='english',
+                               max_features=6000,
+                               ngram_range=(1, 3))
+                               
+git commit -am "Add bigram features"
+dvc repro evaluation.txt.dvc
+cat data/evaluation.txt
+
+
+
+
